@@ -59,12 +59,33 @@ helm install ingress-nginx ingress-nginx/ingress-nginx \
 
 Caso queira adicionar persistência nesse ambiente acesse https://github.com/silvemerson/kind-infra-lab
 
-```
 
 
 ### Ollama
 
+Instale o Ollama no seu cluster K8s conforme passo a passo abaixo:
+
+```
 helm repo add otwld https://helm.otwld.com/
 helm repo update
 helm upgrade ollama otwld/ollama --namespace ollama --values values.yaml
+```
+
+
+Configure seu ```/etc/hosts``` de acordo com o IP do service do Nginx
+
+```bash
+
+172.xx.xx.xx ollama.local
+
+```
+
+
+Valide: 
+
+```bash
+
+curl http://ollama.local
+Ollama is running
+
 ```
