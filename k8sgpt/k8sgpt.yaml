@@ -1,0 +1,20 @@
+ai:
+  providers:
+    - name: ollama
+      model: llama2         # ou outro modelo que você tenha
+      baseurl: http://ollama.local  # endpoint do Ollama
+      password: ""           # deixe vazio se não precisar
+      temperature: 0.7
+      topp: 0.5
+      topk: 50
+      maxtokens: 2048
+      customheaders: []
+      language: portuguese
+  defaultprovider: ollama
+
+commit: 83c5d67
+date: unknown
+kubeconfig: ""
+kubecontext: ""
+verbose: false
+version: 0.4.25
