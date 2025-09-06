@@ -1,0 +1,24 @@
+kind: Cluster
+apiVersion: kind.x-k8s.io/v1alpha4
+name: fenrir
+networking:
+  apiServerAddress: "0.0.0.0"
+nodes:
+  - role: control-plane
+  - role: worker
+  - role: worker
+containerdConfigPatches:
+  - |
+    [plugins."io.containerd.grpc.v1.cri".registry.mirrors."registry.ollama.ai"]
+      endpoint = ["https://registry.ollama.ai"]
+    [plugins."io.containerd.grpc.v1.cri".registry.mirrors."docker.io"]
+      endpoint = ["https://registry-1.docker.io"]
+    [plugins."io.containerd.grpc.v1.cri".registry.mirrors."ghcr.io"]
+      endpoint = ["https://ghcr.io"]
+    [plugins."io.containerd.grpc.v1.cri".registry.mirrors."gcr.io"]
+      endpoint = ["https://gcr.io"]
+    [plugins."io.containerd.grpc.v1.cri".registry.mirrors."quay.io"]
+      endpoint = ["https://quay.io"]
+    [plugins."io.containerd.grpc.v1.cri".registry.mirrors."mcr.microsoft.com"]
+      endpoint = ["https://mcr.microsoft.com"]
+
