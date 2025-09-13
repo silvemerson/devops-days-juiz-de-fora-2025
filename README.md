@@ -68,7 +68,7 @@ Instale o Ollama no seu cluster K8s conforme passo a passo abaixo:
 ```
 helm repo add otwld https://helm.otwld.com/
 helm repo update
-helm upgrade ollama otwld/ollama --namespace ollama --values values.yaml
+helm upgrade --install ollama otwld/ollama --namespace ollama --values ollama/values.yaml
 ```
 
 
