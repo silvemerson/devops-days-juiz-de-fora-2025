@@ -1,0 +1,28 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: k8sgpt-config
+  namespace: k8sgpt
+  labels:
+    app: k8sgpt-report
+data:
+  k8sgpt.yaml: |
+    ai:
+        providers:
+            - name: ollama
+              model: llama3.1
+              baseurl: http://192.168.1.100:11434
+              endpointname: ollama
+              temperature: 0.7
+              topp: 0.5
+              topk: 50
+              maxtokens: 2048
+              customheaders: []
+        defaultprovider: ollama
+    commit: 67f5855
+    date: unknown
+    kubeconfig: ""
+    kubecontext: ""
+    verbose: false
+    version: 0.4.13
+

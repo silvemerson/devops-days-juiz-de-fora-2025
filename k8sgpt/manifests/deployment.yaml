@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: k8sgpt-report
+  namespace: k8sgpt
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: k8sgpt-report
+  template:
+    metadata:
+      labels:
+        app: k8sgpt-report
+    spec:
+      serviceAccountName: k8sgpt-report-sa
+      containers:
+        - name: k8sgpt-report
+          image: k8sgpt-report:teste
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 5000
+          volumeMounts:
+            - name: relatorios-volume
+              mountPath: k8sgpt-report/relatorios
+            - name: logs-volume
+              mountPath: k8sgpt-report/logs          
+            - name: k8sgpt-config
+              mountPath: /root/.config/k8sgpt
+              readOnly: true            
+          resources:
+            requests:
+              cpu: 100m
+              memory: 128Mi
+            limits:
+              cpu: 500m
+              memory: 512Mi
+      volumes:
+        - name: k8sgpt-config
+          configMap:
+            name: k8sgpt-config
+        - name: relatorios-volume
+          emptyDir: {}
+        - name: logs-volume
+          emptyDir: {}
