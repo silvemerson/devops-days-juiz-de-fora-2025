@@ -1,0 +1,19 @@
+[2025-09-13T17:05:42.391089] k8sgpt/k8sgpt-report: Deployment k8sgpt/k8sgpt-report has 1 replicas but 0 are available with status running
+[2025-09-13T17:05:42.391147] default/kube-root-ca.crt: ConfigMap kube-root-ca.crt is not used by any pods in the namespace
+[2025-09-13T17:05:42.391189] ingress-nginx/ingress-nginx-controller: ConfigMap ingress-nginx-controller is not used by any pods in the namespace
+[2025-09-13T17:05:42.391228] ingress-nginx/kube-root-ca.crt: ConfigMap kube-root-ca.crt is not used by any pods in the namespace
+[2025-09-13T17:05:42.391258] k8sgpt/kube-root-ca.crt: ConfigMap kube-root-ca.crt is not used by any pods in the namespace
+[2025-09-13T17:05:42.391286] kube-node-lease/kube-root-ca.crt: ConfigMap kube-root-ca.crt is not used by any pods in the namespace
+[2025-09-13T17:05:42.391318] kube-public/cluster-info: ConfigMap cluster-info is not used by any pods in the namespace
+[2025-09-13T17:05:42.391346] kube-public/kube-root-ca.crt: ConfigMap kube-root-ca.crt is not used by any pods in the namespace
+[2025-09-13T17:05:42.391374] kube-system/extension-apiserver-authentication: ConfigMap extension-apiserver-authentication is not used by any pods in the namespace
+[2025-09-13T17:05:42.391403] kube-system/kube-apiserver-legacy-service-account-token-tracking: ConfigMap kube-apiserver-legacy-service-account-token-tracking is not used by any pods in the namespace
+[2025-09-13T17:05:42.391437] kube-system/kube-root-ca.crt: ConfigMap kube-root-ca.crt is not used by any pods in the namespace
+[2025-09-13T17:05:42.391470] kube-system/kubeadm-config: ConfigMap kubeadm-config is not used by any pods in the namespace
+[2025-09-13T17:05:42.391505] kube-system/kubelet-config: ConfigMap kubelet-config is not used by any pods in the namespace
+[2025-09-13T17:05:42.391534] local-path-storage/kube-root-ca.crt: ConfigMap kube-root-ca.crt is not used by any pods in the namespace
+[2025-09-13T17:05:42.391562] metallb-system/kube-root-ca.crt: ConfigMap kube-root-ca.crt is not used by any pods in the namespace
+[2025-09-13T17:05:42.391590] nfs-provisioner/kube-root-ca.crt: ConfigMap kube-root-ca.crt is not used by any pods in the namespace
+[2025-09-13T17:05:42.391626] ollama/kube-root-ca.crt: ConfigMap kube-root-ca.crt is not used by any pods in the namespace
+[2025-09-13T17:05:42.391659] k8sgpt/k8sgpt-report-7884848fc8-kkpjr: Back-off pulling image "k8sgpt-report:teste": ErrImagePull: failed to pull and unpack image "docker.io/library/k8sgpt-report:teste": failed to resolve reference "docker.io/library/k8sgpt-report:teste": pull access denied, repository does not exist or may require authorization: server message: insufficient_scope: authorization failed
+[2025-09-13T17:05:42.391689] k8sgpt/k8sgpt-report: Service has not ready endpoints, pods: [Pod/k8sgpt-report-7884848fc8-kkpjr], expected 1

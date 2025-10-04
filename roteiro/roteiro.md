@@ -5,9 +5,10 @@
 
 ## Quem sou eu
 - Trabalho como **SRE/DevOps** há anos  
-- Minha rotina sempre envolveu clusters Kubernetes  
-- Deploys, observabilidade, troubleshooting... vocês sabem como é  
-- Mas muitas vezes me vi **afogado em problemas repetidos**
+- Já me vi **afogado em problemas repetidos**, lidando com falhas e loops infinitos de pods.  
+- Minha rotina sempre girou em torno de **clusters Kubernetes**, **resolvendo problemas críticos** e garantindo que tudo continuasse funcionando.  
+- Cada desafio me ensinou a importância da **automação, confiabilidade e pensamento rápido** — e é isso que levo para cada projeto e treinamento que conduzo.
+
 
 ---
 

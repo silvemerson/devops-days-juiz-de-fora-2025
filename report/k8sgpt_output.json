@@ -1,0 +1,269 @@
+{
+  "provider": "ollama",
+  "errors": null,
+  "status": "ProblemDetected",
+  "problems": 20,
+  "results": [
+    {
+      "kind": "Deployment",
+      "name": "k8sgpt/k8sgpt-report",
+      "error": [
+        {
+          "Text": "Deployment k8sgpt/k8sgpt-report has 1 replicas but 0 are available with status running",
+          "KubernetesDoc": "",
+          "Sensitive": [
+            {
+              "Unmasked": "k8sgpt",
+              "Masked": "dStCaWZf"
+            },
+            {
+              "Unmasked": "k8sgpt-report",
+              "Masked": "UjxTUTxFJXdsMSU1Vw=="
+            }
+          ]
+        }
+      ],
+      "details": "\nError: O Deployment k8sgpt/k8sgpt-report tem 1 replicas, mas ninguno está disponível com status running.\n\nSolution:\n\n1. Verify the deployment configuration file to ensure it has the correct replica count and status.\n2. Check the pods running in the cluster to see if any are stuck or failed.\n3. Ensure the deployment is properly scaled and autoscaling is enabled.\n4. If none of the above solutions work, try deleting and redeploying the deployment.",
+      "parentObject": ""
+    },
+    {
+      "kind": "ConfigMap",
+      "name": "default/kube-root-ca.crt",
+      "error": [
+        {
+          "Text": "ConfigMap kube-root-ca.crt is not used by any pods in the namespace",
+          "KubernetesDoc": "",
+          "Sensitive": []
+        }
+      ],
+      "details": "\nError: O Certificado de raiz kube-root-ca.crt não é utilizado por nenhum pod no namespace.\n\nSolution:\n1. Verifique se o certificado está disponível e pode ser acessado pelas contas do Kubernetes no namespace.\n2. Tente remova o referência ao certificado no objeto de ConfigMap, ou adicione uma referência corretamente no objeto de Pod.",
+      "parentObject": ""
+    },
+    {
+      "kind": "ConfigMap",
+      "name": "ingress-nginx/ingress-nginx-controller",
+      "error": [
+        {
+          "Text": "ConfigMap ingress-nginx-controller is not used by any pods in the namespace",
+          "KubernetesDoc": "",
+          "Sensitive": []
+        },
+        {
+          "Text": "ConfigMap ingress-nginx-controller is empty",
+          "KubernetesDoc": "",
+          "Sensitive": []
+        }
+      ],
+      "details": "\nError: O ConfigMap ingress-nginx-controller não é usado por nenhum pod no namespace e está vazio.\n\nSolution:\n\n1. Verify if the IngressNginxController is created and running in the namespace by running `kubectl get cm ingress-nginx-controller -n \u003cnamespace\u003e` and `kubectl get pods -n \u003cnamespace\u003e`.\n2. Check if the ConfigMap has any data by running `kubectl get cm ingress-nginx-controller -n \u003cnamespace\u003e`. If it's empty, create a new one with the desired configuration using `kubectl create cm ingress-nginx-controller --from-file=\u003cpath_to_config_file\u003e -n \u003cnamespace\u003e`.\n3. Ensure that the IngressNginxController is configured to use the newly created ConfigMap by running `kubectl patch cm ingress-nginx-controller -n \u003cnamespace\u003e --type=json --set.data='INGRESS_CONTROLLER_CONFIGMAP=\u003cname_of_newly_created_configmap\u003e'`.\n4. Wait for the changes to take effect by running `kubectl wait --for=deployment ingress-nginx-controller -n \u003cnamespace\u003e`.",
+      "parentObject": ""
+    },
+    {
+      "kind": "ConfigMap",
+      "name": "ingress-nginx/kube-root-ca.crt",
+      "error": [
+        {
+          "Text": "ConfigMap kube-root-ca.crt is not used by any pods in the namespace",
+          "KubernetesDoc": "",
+          "Sensitive": []
+        }
+      ],
+      "details": "\nError: O Certificado de raiz kube-root-ca.crt não é utilizado por nenhum pod no namespace.\n\nSolution:\n1. Verifique se o certificado está disponível e pode ser acessado pelas contas do Kubernetes no namespace.\n2. Tente remova o referência ao certificado no objeto de ConfigMap, ou adicione uma referência corretamente no objeto de Pod.",
+      "parentObject": ""
+    },
+    {
+      "kind": "ConfigMap",
+      "name": "k8sgpt/kube-root-ca.crt",
+      "error": [
+        {
+          "Text": "ConfigMap kube-root-ca.crt is not used by any pods in the namespace",
+          "KubernetesDoc": "",
+          "Sensitive": []
+        }
+      ],
+      "details": "\nError: O Certificado de raiz kube-root-ca.crt não é utilizado por nenhum pod no namespace.\n\nSolution:\n1. Verifique se o certificado está disponível e pode ser acessado pelas contas do Kubernetes no namespace.\n2. Tente remova o referência ao certificado no objeto de ConfigMap, ou adicione uma referência corretamente no objeto de Pod.",
+      "parentObject": ""
+    },
+    {
+      "kind": "ConfigMap",
+      "name": "kube-node-lease/kube-root-ca.crt",
+      "error": [
+        {
+          "Text": "ConfigMap kube-root-ca.crt is not used by any pods in the namespace",
+          "KubernetesDoc": "",
+          "Sensitive": []
+        }
+      ],
+      "details": "\nError: O Certificado de raiz kube-root-ca.crt não é utilizado por nenhum pod no namespace.\n\nSolution:\n1. Verifique se o certificado está disponível e pode ser acessado pelas contas do Kubernetes no namespace.\n2. Tente remova o referência ao certificado no objeto de ConfigMap, ou adicione uma referência corretamente no objeto de Pod.",
+      "parentObject": ""
+    },
+    {
+      "kind": "ConfigMap",
+      "name": "kube-public/cluster-info",
+      "error": [
+        {
+          "Text": "ConfigMap cluster-info is not used by any pods in the namespace",
+          "KubernetesDoc": "",
+          "Sensitive": []
+        }
+      ],
+      "details": "\nError: O erro ocorreu durante a criação do ConfigMap \"cluster-info\". Ele não é usado por nenhum pod no namespace.\n\nSolution:\n1. Verifique se o ConfigMap existe e está sendo usado corretamente no namespace.\n2. Tente recriar o ConfigMap com um nome diferente para verificar se isso resolve o problema.\n3. Se o problema persistir, tente remover o ConfigMap e criar novo com as configurações desejadas.",
+      "parentObject": ""
+    },
+    {
+      "kind": "ConfigMap",
+      "name": "kube-public/kube-root-ca.crt",
+      "error": [
+        {
+          "Text": "ConfigMap kube-root-ca.crt is not used by any pods in the namespace",
+          "KubernetesDoc": "",
+          "Sensitive": []
+        }
+      ],
+      "details": "\nError: O Certificado de raiz kube-root-ca.crt não é utilizado por nenhum pod no namespace.\n\nSolution:\n1. Verifique se o certificado está disponível e pode ser acessado pelas contas do Kubernetes no namespace.\n2. Tente remova o referência ao certificado no objeto de ConfigMap, ou adicione uma referência corretamente no objeto de Pod.",
+      "parentObject": ""
+    },
+    {
+      "kind": "ConfigMap",
+      "name": "kube-system/extension-apiserver-authentication",
+      "error": [
+        {
+          "Text": "ConfigMap extension-apiserver-authentication is not used by any pods in the namespace",
+          "KubernetesDoc": "",
+          "Sensitive": []
+        }
+      ],
+      "details": "\nError: Erro: A ConfigMap extension-apiserver-authentication não é utilizada por nenhum pod no namespace.\n\nSolution:\n\n1. Verify that the ConfigMap is properly defined and exists in the namespace.\n2. Check if any pods are using the extension-apiserver-authentication feature by checking their annotations or configuration files.\n3. If none of the pods are using the feature, you can safely ignore this error message.",
+      "parentObject": ""
+    },
+    {
+      "kind": "ConfigMap",
+      "name": "kube-system/kube-apiserver-legacy-service-account-token-tracking",
+      "error": [
+        {
+          "Text": "ConfigMap kube-apiserver-legacy-service-account-token-tracking is not used by any pods in the namespace",
+          "KubernetesDoc": "",
+          "Sensitive": []
+        }
+      ],
+      "details": "\nError: O erro ocorreu mientras processava a ConfigMap kube-apiserver-legacy-service-account-token-tracking. Não é usado por nenhum pod no namespace.\n\nSolution:\n\n1. Verificar se a ConfigMap existe e está disponível para uso no namespace.\n\t* Utilize o comando `kubectl get cm kube-apiserver-legacy-service-account-token-tracking` para verificar a existência da ConfigMap.\n\t* Se a ConfigMap não estiver disponível, tente criá-la usando o comando `kubectl create cm kube-apiserver-legacy-service-account-token-tracking`.\n2. Verificar se os pods no namespace estão usando a ConfigMap para obter tokens de autenticação.\n\t* Utilize o comando `kubectl get pods -n \u003cnamespace\u003e` para verificar quais pods estão running no namespace.\n\t* Verifique se os pods estão referenciando a ConfigMap usando o comando `kubectl describe pod \u003cpod-name\u003e`.\n3. Se os pods não estiverem usando a ConfigMap, tente atualizar a ConfigMap para que ela esteja disponível para uso novamente.\n\t* Utilize o comando `kubectl update cm kube-apiserver-legacy-service-account-token-tracking` para atualizar a ConfigMap.",
+      "parentObject": ""
+    },
+    {
+      "kind": "ConfigMap",
+      "name": "kube-system/kube-root-ca.crt",
+      "error": [
+        {
+          "Text": "ConfigMap kube-root-ca.crt is not used by any pods in the namespace",
+          "KubernetesDoc": "",
+          "Sensitive": []
+        }
+      ],
+      "details": "\nError: O Certificado de raiz kube-root-ca.crt não é utilizado por nenhum pod no namespace.\n\nSolution:\n1. Verifique se o certificado está disponível e pode ser acessado pelas contas do Kubernetes no namespace.\n2. Tente remova o referência ao certificado no objeto de ConfigMap, ou adicione uma referência corretamente no objeto de Pod.",
+      "parentObject": ""
+    },
+    {
+      "kind": "ConfigMap",
+      "name": "kube-system/kubeadm-config",
+      "error": [
+        {
+          "Text": "ConfigMap kubeadm-config is not used by any pods in the namespace",
+          "KubernetesDoc": "",
+          "Sensitive": []
+        }
+      ],
+      "details": "\nError: O ConfigMap kubeadm-config não é utilizado por nenhum pod no namespace.\n\nSolution:\n\n1. Verify that the ConfigMap exists and is properly configured in your Kubernetes cluster.\n2. Check if any pods are using the `kubeadm` command by running `kubectl get pods -n \u003cnamespace\u003e` and look for any pods with a `kubeadm` label.\n3. If no pods are found, check if there are any other ways to configure kubeadm in your cluster, such as using environment variables or a different configuration file.",
+      "parentObject": ""
+    },
+    {
+      "kind": "ConfigMap",
+      "name": "kube-system/kubelet-config",
+      "error": [
+        {
+          "Text": "ConfigMap kubelet-config is not used by any pods in the namespace",
+          "KubernetesDoc": "",
+          "Sensitive": []
+        }
+      ],
+      "details": "\nError: Erro de Kubernetes - O ConfigMap \"kubelet-config\" não é utilizado por nenhum pod no namespace.\n\nSolution:\n\n1. Verify if the ConfigMap exists and is properly configured in your Kubernetes cluster.\n2. Check if any pods are using the \"kubelet-config\" ConfigMap by running `kubectl get cm kubelet-config -n \u003cnamespace\u003e` and verify the output.\n3. If no pods are using the ConfigMap, try removing it and recreate it with the proper configuration.\n4. If the issue persists, check if there are any other ConfigMaps or objects that may be causing conflicts.",
+      "parentObject": ""
+    },
+    {
+      "kind": "ConfigMap",
+      "name": "local-path-storage/kube-root-ca.crt",
+      "error": [
+        {
+          "Text": "ConfigMap kube-root-ca.crt is not used by any pods in the namespace",
+          "KubernetesDoc": "",
+          "Sensitive": []
+        }
+      ],
+      "details": "\nError: O Certificado de raiz kube-root-ca.crt não é utilizado por nenhum pod no namespace.\n\nSolution:\n1. Verifique se o certificado está disponível e pode ser acessado pelas contas do Kubernetes no namespace.\n2. Tente remova o referência ao certificado no objeto de ConfigMap, ou adicione uma referência corretamente no objeto de Pod.",
+      "parentObject": ""
+    },
+    {
+      "kind": "ConfigMap",
+      "name": "metallb-system/kube-root-ca.crt",
+      "error": [
+        {
+          "Text": "ConfigMap kube-root-ca.crt is not used by any pods in the namespace",
+          "KubernetesDoc": "",
+          "Sensitive": []
+        }
+      ],
+      "details": "\nError: O Certificado de raiz kube-root-ca.crt não é utilizado por nenhum pod no namespace.\n\nSolution:\n1. Verifique se o certificado está disponível e pode ser acessado pelas contas do Kubernetes no namespace.\n2. Tente remova o referência ao certificado no objeto de ConfigMap, ou adicione uma referência corretamente no objeto de Pod.",
+      "parentObject": ""
+    },
+    {
+      "kind": "ConfigMap",
+      "name": "nfs-provisioner/kube-root-ca.crt",
+      "error": [
+        {
+          "Text": "ConfigMap kube-root-ca.crt is not used by any pods in the namespace",
+          "KubernetesDoc": "",
+          "Sensitive": []
+        }
+      ],
+      "details": "\nError: O Certificado de raiz kube-root-ca.crt não é utilizado por nenhum pod no namespace.\n\nSolution:\n1. Verifique se o certificado está disponível e pode ser acessado pelas contas do Kubernetes no namespace.\n2. Tente remova o referência ao certificado no objeto de ConfigMap, ou adicione uma referência corretamente no objeto de Pod.",
+      "parentObject": ""
+    },
+    {
+      "kind": "ConfigMap",
+      "name": "ollama/kube-root-ca.crt",
+      "error": [
+        {
+          "Text": "ConfigMap kube-root-ca.crt is not used by any pods in the namespace",
+          "KubernetesDoc": "",
+          "Sensitive": []
+        }
+      ],
+      "details": "\nError: O Certificado de raiz kube-root-ca.crt não é utilizado por nenhum pod no namespace.\n\nSolution:\n1. Verifique se o certificado está disponível e pode ser acessado pelas contas do Kubernetes no namespace.\n2. Tente remova o referência ao certificado no objeto de ConfigMap, ou adicione uma referência corretamente no objeto de Pod.",
+      "parentObject": ""
+    },
+    {
+      "kind": "Pod",
+      "name": "k8sgpt/k8sgpt-report-7884848fc8-kkpjr",
+      "error": [
+        {
+          "Text": "Back-off pulling image \"k8sgpt-report:teste\": ErrImagePull: failed to pull and unpack image \"docker.io/library/k8sgpt-report:teste\": failed to resolve reference \"docker.io/library/k8sgpt-report:teste\": pull access denied, repository does not exist or may require authorization: server message: insufficient_scope: authorization failed",
+          "KubernetesDoc": "",
+          "Sensitive": []
+        }
+      ],
+      "details": "\nError: The Kubernetes cluster is unable to pull and unpack the image \"docker.io/library/k8sgpt-report:teste\" due to a pull access denied error.\n\nSolution:\n1. Check if the repository exists and is accessible by running `docker inspect k8sgpt-report` or `docker search k8sgpt-report`.\n2. If the repository does not exist, create it by running `docker login` with the appropriate credentials.\n3. If the repository exists but you still receive an authorization error, ensure that your Kubernetes cluster has the necessary permissions to access the repository by running `kubectl get-credentials` and checking if the desired permissions are set.",
+      "parentObject": "Deployment/k8sgpt-report"
+    },
+    {
+      "kind": "Service",
+      "name": "k8sgpt/k8sgpt-report",
+      "error": [
+        {
+          "Text": "Service has not ready endpoints, pods: [Pod/k8sgpt-report-7884848fc8-kkpjr], expected 1",
+          "KubernetesDoc": "",
+          "Sensitive": []
+        }
+      ],
+      "details": "\nError: O serviço não tem pontos finais prontos e os pods: [Pod/k8sgpt-report-7884848fc8-kkpjr], esperado 1.\n\nSolution:\n\n1. Verifique se o serviço está sendo criado corretamente usando o comando `kubectl create service`.\n2. Verifique se o pod está sendo criado corretamente usando o comando `kubectl create pod`.\n3. Verifique se o serviço tem um endereço IP disponível para os pontos finais. Use o comando `kubectl get service \u003cservicename\u003e` para obter informações sobre o serviço.\n4. Certifique-se de que o serviço esteja configurado corretamente para usar o endereço IP desejado. Use o comando `kubectl update service \u003cservicename\u003e` para atualizar o serviço.\n5. Tente novamente o comando `kubectl get endpoints` para verificar se os pontos finais estão disponíveis.",
+      "parentObject": ""
+    }
+  ]
+}
