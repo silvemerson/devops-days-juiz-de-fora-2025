@@ -124,3 +124,23 @@ Error: O ConfigMap ingress-nginx-controller não é usado por nenhum pod no name
 
 
 ```
+
+### Report com python
+
+Com o ollama e o k8sgpt em funcionamento, execute o script report/app.py:
+
+```bash
+$ python3.11 report/app.py
+ * Serving Flask app 'app'
+ * Debug mode: on
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+Press CTRL+C to quit
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 737-881-388
+127.0.0.1 - - [03/Oct/2025 22:14:31] "GET / HTTP/1.1" 200 -
+127.0.0.1 - - [03/Oct/2025 22:14:32] "GET /favicon.ico HTTP/1.1" 404 -
+```
+
+![](img/report.png)
